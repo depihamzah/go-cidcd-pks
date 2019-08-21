@@ -30,7 +30,7 @@ pipeline {
             }
             steps {
                 script {
-                    docker.withRegistry('https://harbor.vmware.local', 'harbor') {
+                    docker.withRegistry('https://harbor.ictlab.com', 'harbor') {
                         app.push("${env.BUILD_NUMBER}")
                         app.push("latest")
                     }
